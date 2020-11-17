@@ -20,6 +20,7 @@ class Bigint {
 public:
     // Constructors/Destructors
     Bigint(intmax_t = 0);
+    // TODO: Change to repeated squaring method
     Bigint(intmax_t base, unsigned exponent);
     
     // Accessors
@@ -62,13 +63,15 @@ public:
     Bigint operator-(Bigint b) const;
     Bigint& operator-=(Bigint b);
     Bigint operator-() const;
+    // TODO: Implement for negative numbers
     Bigint operator%(Bigint modulus) const;
-    //Bigint& operator+=(Bigint b);
-    //Bigint& operator-=(Bigint b);
+    Bigint integerMult(fint A) const;
     Bigint operator*(Bigint b) const;
     Bigint& operator*=(Bigint b);
     //Bigint& operator*=(Bigint b);
-    Bigint& operator<<(Bigint b);
+    //Bigint& operator<<(Bigint b);
+    Bigint operator<<(unsigned long n);
+    Bigint operator>>(unsigned long n);
     
     
     
@@ -85,9 +88,13 @@ private:
     // This is the number system the number will be outputed in
     // Possible values: "bin"
     std::string         outputType;
+    
+    // Private Auxiliary Functions
+    void removeLeadingZeroes();
 };
 
 // Printing
+// TODO: Fix bug with printing leading zeroes
 std::ostream& operator<<(std::ostream& s, Bigint b);
 
 // Free functions

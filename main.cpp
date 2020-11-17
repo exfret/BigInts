@@ -10,27 +10,60 @@
 //  Custom files needed for a file not needed in the header go in the .cpp,
 //  unless said file is the globals.hpp, in which case it goes in header
 //
+//  Current functions untested
+//  Currently implementing/converting old functions
+//
 ///////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
 #include <string>
 #include "Bigint.hpp"
+#include "multiplication.hpp"
 
 //std::string Bigint::OUTPUT_NUMBER_SYSTEM = "";
 
 int main() {
     
-    Bigint b = 30;
-    Bigint c = 400000;
+    Bigint b(9,20000);
     
     std::cout << b << "\n";
-    std::cout << c << "\n";
-    std::cout << b + c << "\n";
-    
-    //int x = convertBigint<int>(b);
+    //std::cout << karatsuba(b, c) << "\n";
     
     
     
-    //Bigint b(3894,3894);
-    //std::cout << b << std::endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
